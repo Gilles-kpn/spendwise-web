@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/app/css/app.css">
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+
+    <title>Gilles Applications</title>
+</head>
+<body class="bg-body d-flex align-items-center justify-content-center w-100 h-100 mw-100 mh-100">
+<div class="content container container-fluid ">
+    <div class="account">
+        <div class="profile">
+            <img src="https://media.licdn.com/dms/image/D4D35AQH0REnhqlakcg/profile-framedphoto-shrink_200_200/0/1634078219157?e=1703970000&v=beta&t=_7O3NBS_BTsAtLgwApGi2HnX3CD7IGEF5miXOiEK-XA" alt="profile">
+        </div>
+        <div class="info row mx-0">
+            <div class="col-md-8">
+                <div class="fw-bold">
+                    Gilles Kpanou
+                </div>
+                <div>
+                    Programmer Analyst
+                </div>
+                <div class="">
+                    Favorite topics: #developer, #computer, #programming, #web, #mobile
+                </div>
+                <div>
+                    Cotonou, Littoral, Bénin
+                </div>
+                <div class="mt-2">
+                    <a type="button" href="https://www.linkedin.com/in/gilles-kpanou-251378214/" target="_blank" class="btn btn-outline-primary"> <i class="text-decoration-none fab fa-linkedin"></i> Linkedin</a>
+                    <a href="mailto:okpanou2@gmail.com" type="button" target="_blank" class="text-decoration-none btn btn-outline-danger"> <i class="fa fa-envelope"></i> Gmail</a>
+                    <a href="https://github.com/Gilles-kpn/" target="_blank" type="button" class="btn btn-outline-dark text-decoration-none" > <i class="fab fa-github"></i> Github</a>
+                </div>
+            </div>
+            <div class="col-md-4 fw-bold">
+                <div class="py-1">
+                    <i class="fa fa-building"></i> OMEGA NUMERIC IT
+                </div>
+                <div class="py-1">
+                    <i class="fa fa-building"></i> ANAIZAN
+                </div>
+                <div class="py-1">
+                    <i class="fa fa-building"></i> JTEK SOLUTIONS (Current)
+                </div>
+            </div>
+        </div>
+    </div>
+    <h2 class="mt-4">Applications</h2>
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    <img src="assets/images/spendwise_logo_512x512.png" alt="spendwiselogo" width="50" height="50">
+                    Spendwise <span id="id_connected_as"></span>
+                </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body" id="spendwise_accordion_body">
+                    <div>
+                        Simplify your financial life with our Spend Wise app! Easily register income and expenses, get insights on common expenses with a user-friendly dashboard, and enjoy premium features to securely store your data online. Take charge of your finances effortlessly with Spend Wise.
+                    </div>
+                    <a class="text-decoration-none btn  d-flex align-items-center p-2 m-3" id="deleteSpendWise" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        <i class="fa fa-trash text-danger mx-2"></i>
+                        <div class="flex-grow-1 " style="text-align: left">
+                            Deletion of account and associated data
+                        </div>
+                        <i class="fa fa-arrow-right"> </i>
+                    </a>
+                </div>
+                <div  class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Account deletion</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="alert alert-warning" role="alert">
+                                    <h4 class="alert-heading">Warning: Account Deletion</h4>
+                                    <p>Are you sure you want to delete your account? This action is irreversible and will permanently erase all your account data, including settings, preferences, and transaction history.</p>
+                                    <hr>
+                                    <p class="mb-0">This process cannot be undone. Please consider the consequences carefully. If you proceed, your account and data will be deleted permanently. If you have any concerns or need assistance, contact our support team.</p>
+                                </div>
+
+                                <form class="form" method="post" id="spendwise_login">
+                                    <label for="email" class="form-label">Email</label>
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text" id="email-addons"><i class="fa fa-envelope"></i></span>
+                                        <input type="email" required class="form-control" id="email" name="email" placeholder="Enter your mail">
+                                    </div>
+
+                                    <label for="password" class="form-label">Password</label>
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text" id="password-addonfs"><i class="fa fa-envelope"></i></span>
+                                        <input type="password" required class="form-control" id="password" name="password" placeholder="Enter your password">
+                                    </div>
+
+                                    <div class="form-buttons d-flex align-items-center justify-content-end">
+                                        <button type="button" class="btn btn-danger mx-1" id="spendwise_login_google">Sign In with Google</button>
+                                        <button type="button" class="btn btn-secondary mx-1" data-bs-dismiss="modal">Close</button>
+                                        <button type="submit" class="btn btn-primary mx-1">Login to delete</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mx-auto text-center mt-4"> Copyright: KPANOU Gilles. All rights reserved</div>
+</div>
+
+<!-- Loading Modal -->
+<div class="modal fade" id="loadingModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="loadingModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body text-center">
+                <i class="fas fa-spinner fa-spin fa-3x"></i>
+                <p>Loading...</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Alert Modal -->
+<div class="modal fade" id="alertModal" tabindex="-1" aria-labelledby="alertModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="alertModalLabel">Alert</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p id="alertMessage"></p>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="assets/jquery/jquery.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/fontawesome/js/all.min.js"></script>
+<script src="https://www.google.com/recaptcha/api.js?render=6LcA3DopAAAAAEu6_PFS8Ie5AdCe3e9_HQ10m4lI"></script>
+
+<script src="assets/app/js/app.js" type="module" defer></script>
+</body>
+</html>

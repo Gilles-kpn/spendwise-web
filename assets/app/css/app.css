@@ -1,0 +1,40 @@
+.content{
+    padding: 40px 20px;
+}
+
+
+.account{
+    width: 100%;
+    min-height: 400px;
+    background-color: white;
+    border-radius: 10px;
+    background-image: url("https://media.licdn.com/dms/image/C4E16AQFLrUZMQDYzPQ/profile-displaybackgroundimage-shrink_350_1400/0/1627982860157?e=1708560000&v=beta&t=S0sUxl9CBYn-xdN4Wk_1L9AOkSKjUf8PZQshw2CWG7A");
+    background-repeat: no-repeat;
+    background-size: 100% 200px;
+    position: relative;
+    border: 1px solid black;
+}
+.account .info{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: 20px 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.account .profile{
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+    border: 2px solid white;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.account .profile img{
+    width: 100%;
+    height: 100%;
+    border-radius: 75px;
+}
