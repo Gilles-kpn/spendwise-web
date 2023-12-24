@@ -208,26 +208,6 @@ async function deleteCurrentUser() {
     await deleteUser(auth.currentUser);
 }
 
-$("#spendwise_login").on('submit', function (event) {
-    event.preventDefault();
-    grecaptcha.ready(function() {
-        grecaptcha.execute('6LcA3DopAAAAAEu6_PFS8Ie5AdCe3e9_HQ10m4lI', {action: 'submit'}).then(function(token) {
-            handleLoginForm("#spendwise_login");
-        });
-    });
-
-});
-
-$("#spendwise_login_google").on('click', function (event) {
-    event.preventDefault();
-    grecaptcha.ready(function() {
-        grecaptcha.execute('6LcA3DopAAAAAEu6_PFS8Ie5AdCe3e9_HQ10m4lI', {action: 'submit'}).then(function(token) {
-            signInWithGoogle();
-        });
-    });
-
-});
-
 
 function showLoading() {
     $('#loadingModal').modal('show');
@@ -252,7 +232,37 @@ function showAlertModal(message, status) {
     }).modal('show');
 }
 
-// Hide alert modal on close
-$('#alertModal').on('hidden.bs.modal', function () {
-    $(this).removeClass('modal-success modal-error');
+
+
+
+
+$(document).ready(function () {
+    $("#spendwise_login").on('submit', function (event) {
+        event.preventDefault();
+        grecaptcha.ready(function() {
+            grecaptcha.execute('6LcA3DopAAAAAEu6_PFS8Ie5AdCe3e9_HQ10m4lI', {action: 'submit'}).then(function(token) {
+                handleLoginForm("#spendwise_login");
+            });
+        });
+
+    });
+
+    $("#spendwise_login_google").on('click', function (event) {
+        event.preventDefault();
+        grecaptcha.ready(function() {
+            grecaptcha.execute('6LcA3DopAAAAAEu6_PFS8Ie5AdCe3e9_HQ10m4lI', {action: 'submit'}).then(function(token) {
+                signInWithGoogle();
+            });
+        });
+
+    });
+
+    $('#alertModal').on('hidden.bs.modal', function () {
+        $(this).removeClass('modal-success modal-error');
+    });
+
+    if(window.location.hash){
+        $(window.location.hash).modal('show')
+    }
+
 });
